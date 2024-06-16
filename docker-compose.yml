@@ -1,0 +1,19 @@
+version: '3.6'
+
+services:
+  artipie-server:
+    image: artipie/artipie:latest
+    network_mode: host
+    volumes:
+      - type: bind
+        source: ./conf/artipie.yaml
+        target: /etc/artipie/artipie.yml
+      - type: bind
+        source: ./repo
+        target: /var/artipie/repo
+      - type: bind
+        source: ./conf/security
+        target: /var/artipie/security
+    #   - type: bind
+    #     source: ./conf/policy
+    #     target: /var/artipie/policy

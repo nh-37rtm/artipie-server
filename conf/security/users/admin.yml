@@ -1,0 +1,11 @@
+type: plain # plain and sha256 types are supported
+pass: qwerty
+email: david@example.com # Optional
+enabled: true # optional default true
+roles:
+  - full-admin
+  - api-admin
+# permissions:
+#   adapter_basic_permissions:
+#     artipie/my-bin:
+#       - write
